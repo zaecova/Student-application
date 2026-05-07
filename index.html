@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Las afecciones neurológicas, la principal causa de enfermedad y discapacidad en todo el mundo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="eyebrow">Informe de la OMS</p>
+        <h1>Las afecciones neurológicas, la principal causa de enfermedad y discapacidad en todo el mundo</h1>
+        <p class="subtitle">Más de 1 de cada 3 personas se ve afectada por una condición neurológica, y cada año alrededor de 11 millones de vidas se pierden por falta de cuidado urgente.</p>
+        <div class="hero-actions">
+          <a class="hero-button" href="#prevalencias">Ver prevalencias</a>
+          <a class="hero-button" href="#edades">Ver edades</a>
+          <a class="hero-button" href="#chat">Ir al chat</a>
+        </div>
+      </div>
+      <div class="hero-stats-side">
+        <div class="stat-item">
+          <p class="stat-label">Personas afectadas</p>
+          <p class="stat-value">3.4B</p>
+          <p class="stat-detail">42% población mundial</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-label">Muertes anuales</p>
+          <p class="stat-value">11.8M</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-label">DALYs</p>
+          <p class="stat-value">435M</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="prevalencias" class="prevalence-chart-section">
+      <h2>Prevalencias: principales trastornos neurológicos</h2>
+      <div id="prevalenceInfoDisplay" class="prevalence-info-display"></div>
+      <div class="prevalence-chart radar-layout">
+        <div class="radar-chart-card">
+          <svg id="prevalenceRadarChart" class="radar-chart-svg" viewBox="0 0 700 700" role="img" aria-label="Gráfico radar de prevalencias neurológicas"></svg>
+        </div>
+        <div class="radar-legend" id="prevalenceLegend">
+          <button class="radar-legend-item" type="button" data-index="0" data-label="Accidente cerebrovascular" data-short="ACV" data-value="160 millones" data-ratio="1" data-description="La principal causa de mortalidad y discapacidad neurológica">Accidente cerebrovascular <span>160M</span></button>
+          <button class="radar-legend-item" type="button" data-index="1" data-label="Encefalopatía neonatal" data-short="Neonatal" data-value="58,6 millones" data-ratio="0.366" data-description="Complicaciones neurológicas en recién nacidos">Encefalopatía neonatal <span>58.6M</span></button>
+          <button class="radar-legend-item" type="button" data-index="2" data-label="Migraña" data-short="Migraña" data-value="43,4 millones" data-ratio="0.271" data-description="Principal causa de años vividos con discapacidad">Migraña <span>43.4M</span></button>
+          <button class="radar-legend-item" type="button" data-index="3" data-label="Demencia" data-short="Demencia" data-value="36,3 millones" data-ratio="0.227" data-description="Principal causa de discapacidad prolongada en mayores">Demencia <span>36.3M</span></button>
+          <button class="radar-legend-item" type="button" data-index="4" data-label="Neuropatía diabética" data-short="Neuropatía" data-value="26,3 millones" data-ratio="0.164" data-description="Complicación neurológica de la diabetes">Neuropatía diabética <span>26.3M</span></button>
+          <button class="radar-legend-item" type="button" data-index="5" data-label="Meningitis" data-short="Meningitis" data-value="14,5 millones" data-ratio="0.091" data-description="Infección inflamatoria de las meninges">Meningitis <span>14.5M</span></button>
+          <button class="radar-legend-item" type="button" data-index="6" data-label="Epilepsia" data-short="Epilepsia" data-value="14,4 millones" data-ratio="0.09" data-description="Trastorno neuronal crónico de convulsiones">Epilepsia <span>14.4M</span></button>
+          <button class="radar-legend-item" type="button" data-index="7" data-label="Parto prematuro" data-short="Prematuro" data-value="13,8 millones" data-ratio="0.086" data-description="Complicaciones neurológicas por nacimiento prematuro">Parto prematuro <span>13.8M</span></button>
+          <button class="radar-legend-item" type="button" data-index="8" data-label="Trastorno del espectro autista" data-short="TEA" data-value="11,5 millones" data-ratio="0.072" data-description="Trastorno del neurodesarrollo">Trastorno del espectro autista <span>11.5M</span></button>
+          <button class="radar-legend-item" type="button" data-index="9" data-label="Cáncer del sistema nervioso" data-short="Cáncer SN" data-value="9,2 millones" data-ratio="0.058" data-description="Tumores del sistema nervioso central y periférico">Cáncer del sistema nervioso <span>9.2M</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="edades" class="age-chart-section moved-chart">
+      <h2>Gráfico: distribución por grupo de edad</h2>
+      <div id="ageInfoDisplay" class="age-info-display"></div>
+      <div class="age-chart">
+        <div class="age-bar">
+          <span class="age-label">0-14</span>
+          <div class="bar" style="--width: 12%;" data-age="0-14" data-info="En este grupo predominan los trastornos neurológicos pediátricos y de desarrollo." data-diseases="Epilepsia;Parálisis cerebral;Desórdenes del neurodesarrollo"><span>12%</span></div>
+        </div>
+        <div class="age-bar">
+          <span class="age-label">15-44</span>
+          <div class="bar" style="--width: 26%;" data-age="15-44" data-info="Este grupo incluye migraña y trastornos psiquiátricos con manifestaciones neurológicas." data-diseases="Migraña;Esclerosis múltiple;Traumatismo craneal"><span>26%</span></div>
+        </div>
+        <div class="age-bar">
+          <span class="age-label">45-64</span>
+          <div class="bar" style="--width: 34%;" data-age="45-64" data-info="El riesgo de AVC y neuropatías aumenta en este grupo de edad." data-diseases="Accidente cerebrovascular;Neuropatía diabética;Demencia temprana"><span>34%</span></div>
+        </div>
+        <div class="age-bar">
+          <span class="age-label">65+</span>
+          <div class="bar" style="--width: 48%;" data-age="65+" data-info="El grupo mayor muestra más demencia y enfermedades cerebrovasculares." data-diseases="Demencia;Accidente cerebrovascular;Enfermedad de Parkinson"><span>48%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="chat" class="chat-section">
+      <div class="chat-card">
+        <div class="chat-intro">
+          <p class="eyebrow">Chatbot informativo OMS</p>
+          <h2>Consulta información sobre afecciones neurológicas</h2>
+          <p class="chat-subtitle">Escribe tu pregunta con palabras normales. El chatbot ahora responde con datos, porcentajes por grupo de edad, prevalencias, síntomas, causas, diagnóstico, tratamiento, trastornos frecuentes, indicadores globales, grupos de edad detallados y objetivos de salud.</p>
+        </div>
+
+        <div class="assistant-panel">
+          <div class="assistant-label">Asistente</div>
+          <div class="chat-window" id="chatWindow">
+            <div class="message bot">Hola, soy tu asistente. Pregunta por síntomas, causas, diagnóstico, tratamiento, prevención, prevalencias o trastornos neurológicos frecuentes.</div>
+          </div>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <input type="text" id="chatInput" placeholder="Escribe tu pregunta aquí..." autocomplete="off" />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
